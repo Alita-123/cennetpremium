@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cennet Premium | Berko &amp; Ali Ömer Canlı Yayında</title>
+<meta name="description" content="Berko ve Ali Ömer'in cennetten canlı yayını. Bulut, Premium, Platin ve Firdevs paketleri. (Tamamen şaka.)">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☁️</text></svg>">
+<style>
+:root{
+  --sky1:#cfe8fb; --sky2:#f4f9ff; --ink:#1b2a4e; --muted:#53668a; --card:#ffffff; --line:#c3d7ec;
+  --gold:#d9a520; --gold2:#f6d56a; --blue:#2f6fdb; --night:#14224a;
+}
+@media (prefers-color-scheme: dark){
+  :root{--sky1:#0d1630;--sky2:#101c3d;--ink:#e8eefc;--muted:#9fb1d6;--card:#16254d;--line:#2a3d73;--gold:#f0c24a;--gold2:#ffe38f;--blue:#7fa8ff;--night:#070d20}
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Segoe UI",system-ui,-apple-system,sans-serif;color:var(--ink);line-height:1.6;font-size:17px;background:linear-gradient(180deg,var(--sky1) 0,var(--sky2) 640px) var(--sky2)}
+h1,h2,h3,.logo{font-family:Georgia,"Times New Roman",serif}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.wrap{max-width:1020px;margin:0 auto;padding:0 20px}
+
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font-size:1.45rem;font-weight:700;text-decoration:none;letter-spacing:-.01em}
+.logo span{color:var(--gold)}
+.top-btn{font-size:.95rem;font-weight:600;text-decoration:none;padding:9px 18px;border-radius:999px;background:var(--night);color:#fff}
+@media (prefers-color-scheme: dark){.top-btn{background:var(--gold);color:#1a1405}}
+
+.hero{padding:44px 0 60px;text-align:center}
+.live{display:inline-flex;align-items:center;gap:9px;background:var(--card);border:1px solid var(--line);padding:7px 16px;border-radius:999px;font-size:.92rem;font-weight:600}
+.live i{width:10px;height:10px;border-radius:50%;background:#e5383b;display:inline-block}
+@media (prefers-reduced-motion:no-preference){.live i{animation:p 1.4s infinite}@keyframes p{50%{opacity:.25}}}
+.hero h1{font-size:clamp(2.4rem,7vw,4.4rem);line-height:1.05;margin:22px auto 0;max-width:15ch;letter-spacing:-.02em}
+.hero p{max-width:46ch;margin:20px auto 0;color:var(--muted);font-size:1.1rem}
+.btn{display:inline-block;margin-top:30px;padding:14px 30px;border-radius:999px;font:600 1rem "Segoe UI",system-ui,sans-serif;text-decoration:none;background:linear-gradient(135deg,var(--gold2),var(--gold));color:#2a1e00;border:0;cursor:pointer}
+.btn:hover{filter:brightness(1.05)}
+
+.screen{max-width:640px;margin:44px auto 0;background:var(--night);border-radius:18px;padding:14px;box-shadow:0 20px 50px -20px #1b2a4e88}
+.screen .view{border-radius:10px;aspect-ratio:16/9;background:linear-gradient(180deg,#8fc7f5,#e9f5ff 70%);position:relative;overflow:hidden;display:flex;align-items:flex-end;justify-content:center;gap:34px;padding-bottom:0}
+.cloud{position:absolute;bottom:0;left:-5%;width:110%;height:38%;background:#fff;border-radius:50% 50% 0 0/100% 100% 0 0}
+.who{position:relative;z-index:1;text-align:center;font-size:3rem;line-height:1;margin-bottom:12%}
+.who small{display:block;font:600 .8rem "Segoe UI",system-ui,sans-serif;color:#1b2a4e;margin-top:6px}
+.halo{display:block;font-size:1.4rem;margin-bottom:-6px}
+.chat{color:#b9c7ee;font-size:.85rem;text-align:left;padding:10px 6px 0}
+.chat b{color:var(--gold2)}
+
+section{padding:56px 0}
+h2{font-size:clamp(1.7rem,4vw,2.4rem);line-height:1.15;text-align:center;margin-bottom:8px}
+.lead{text-align:center;color:var(--muted);max-width:52ch;margin:0 auto 34px}
+
+.story{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+.step{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px}
+.step h3{font-size:1.15rem;margin-bottom:6px}
+.step p{color:var(--muted);font-size:.97rem}
+.step .e{font-size:2rem}
+
+.plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;align-items:stretch}
+.plan{background:var(--card);border:1.5px solid var(--line);border-radius:18px;padding:26px 22px;display:flex;flex-direction:column}
+.plan h3{font-size:1.3rem}
+.price{font:700 2rem Georgia,serif;margin:10px 0 2px}
+.price small{font:400 .85rem "Segoe UI",system-ui,sans-serif;color:var(--muted)}
+.plan ul{list-style:none;margin:16px 0 22px;flex:1}
+.plan li{padding:6px 0 6px 24px;position:relative;font-size:.95rem;border-bottom:1px dashed var(--line)}
+.plan li::before{content:"✓";position:absolute;left:0;color:var(--blue);font-weight:700}
+.plan li.no{color:var(--muted);text-decoration:line-through}
+.plan li.no::before{content:"–";color:var(--muted)}
+.plan .btn{margin:0;text-align:center;font-size:.95rem;padding:12px}
+.plan.free .btn{background:transparent;border:1.5px solid var(--ink);color:var(--ink)}
+.plan.pop{border-color:var(--blue);box-shadow:0 10px 30px -14px var(--blue)}
+.plan.plat{background:var(--night);color:#f4f6ff;border-color:var(--gold)}
+.plan.plat .price small,.plan.plat li{color:#c9d3f5}
+.plan.plat li{border-color:#ffffff22}
+.plan.plat li::before{color:var(--gold2)}
+.plan.top{background:linear-gradient(160deg,#fff3c4,#f2c94c);border-color:var(--gold);color:#2a1e00}
+.plan.top .price small{color:#5a4600}
+.plan.top li{border-color:#2a1e0030}
+.plan.top li::before{color:#2a1e00}
+.plan.top .btn{background:#2a1e00;color:#ffe9a0}
+@media (prefers-color-scheme: dark){.plan.top{background:linear-gradient(160deg,#4a3a0b,#7a5f10);color:#fff2c2}.plan.top .price small{color:#e8d38a}.plan.top li{border-color:#fff2c230}.plan.top li::before{color:var(--gold2)}.plan.top .btn{background:var(--gold2);color:#2a1e00}}
+.badge{align-self:flex-start;font-size:.75rem;font-weight:700;background:var(--blue);color:#fff;border-radius:6px;padding:2px 9px;margin-bottom:8px}
+
+details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin-bottom:10px;max-width:700px;margin-left:auto;margin-right:auto}
+summary{cursor:pointer;font-weight:600}
+details p{color:var(--muted);margin-top:8px}
+
+footer{background:var(--night);color:#9fb1d6;text-align:center;padding:28px 20px;font-size:.9rem}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(120px);background:var(--night);color:#fff;border:1px solid var(--gold);padding:14px 22px;border-radius:14px;max-width:90vw;font-size:.95rem;transition:transform .3s;z-index:30;text-align:center}
+.toast.on{transform:translateX(-50%) translateY(0)}
+@media (prefers-reduced-motion:reduce){.toast{transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="#top">Cennet<span>Premium</span></a>
+    <a class="top-btn" href="#paketler">Paketler</a>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <span class="live"><i></i>CANLI &nbsp;·&nbsp; <span id="izle">8.421.337</span> kişi izliyor</span>
+      <h1>Berko ve Ali Ömer cennetten canlı yayında.</h1>
+      <p>Bir gezi planladılar, ortalık karıştı, yolları değişti. Şimdi bulutların üstünden tüm dünyaya yayın yapıyorlar. Kaçırma.</p>
+      <a class="btn" href="#paketler">Yayına katıl</a>
+
+      <div class="screen" aria-label="Yayın ekranı örneği">
+        <div class="view">
+          <div class="who"><span class="halo">😇</span>🧔<small>Berko</small></div>
+          <div class="who"><span class="halo">😇</span>🕶️<small>Ali Ömer</small></div>
+          <div class="cloud"></div>
+        </div>
+        <div class="chat"><b>Melek_Cemile:</b> wifi çok iyi çekiyor burası 👏<br><b>Premium_Kemal:</b> Ali Ömer neden hâlâ bulut kenarında duruyor</div>
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <h2>Bu iş nasıl oldu?</h2>
+      <p class="lead">Kısa bir özet. İnanmak zorunda değilsiniz, abone olmak yeterli.</p>
+      <div class="story">
+        <div class="step"><div class="e">🧳</div><h3>Yola çıktılar</h3><p>İkisi bir ülkeye gitti. Plan: gez, fotoğraf çek, çay iç.</p></div>
+        <div class="step"><div class="e">💥</div><h3>Ortalık karıştı</h3><p>Bir anda savaş çıktı. Berko ve Ali Ömer olduğu yerde kaldı.</p></div>
+        <div class="step"><div class="e">☁️</div><h3>Cennete vardılar</h3><p>Kapıda sıra yoktu. İçeride wifi vardı. Yayını orada açtılar.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="paketler">
+    <div class="wrap">
+      <h2>Yayın paketleri</h2>
+      <p class="lead">Dilediğin zaman iptal et. Zaten bulutta kimse seni bulamaz.</p>
+      <div class="plans">
+        <div class="plan free">
+          <h3>Bulut</h3>
+          <div class="price">0 ₺<small> / ay</small></div>
+          <ul><li>Yayın 144p, titrek görüntü</li><li>Reklamlı (reklamları melekler okur)</li><li class="no">Canlı sohbet</li><li class="no">Ali Ömer'e soru</li></ul>
+          <button class="btn" data-p="Bulut">Ücretsiz izle</button>
+        </div>
+        <div class="plan pop">
+          <span class="badge">En çok seçilen</span>
+          <h3>Premium</h3>
+          <div class="price">49,90 ₺<small> / ay</small></div>
+          <ul><li>1080p yayın</li><li>Reklamsız</li><li>Canlı sohbette yazma hakkı</li><li class="no">Ali Ömer'e soru</li></ul>
+          <button class="btn" data-p="Premium">Premium ol</button>
+        </div>
+        <div class="plan plat">
+          <h3>Platin</h3>
+          <div class="price">149,90 ₺<small> / ay</small></div>
+          <ul><li>4K yayın</li><li>Berko'ya haftalık soru sorma</li><li>Yayın sonrası kayıt arşivi</li><li>"Platin" rozeti</li></ul>
+          <button class="btn" data-p="Platin">Platin ol</button>
+        </div>
+        <div class="plan top">
+          <h3>Firdevs Elite</h3>
+          <div class="price">499 ₺<small> / ay</small></div>
+          <ul><li>Her şey dahil</li><li>Ali Ömer'le özel sohbet</li><li>Yayında selamını söyleme</li><li>Bulut kenarında sana özel koltuk</li></ul>
+          <button class="btn" data-p="Firdevs Elite">Elite ol</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>Sık sorulanlar</h2>
+      <p class="lead">Melekler her soruyu cevaplıyor, hepsi aynı cevabı veriyor.</p>
+      <details><summary>Yayın kesintisiz mi?</summary><p>Büyük ölçüde. Ara sıra Berko'nun bulutu çekmeyebilir, o zaman sohbet ekranına bakıp beklemen yeterli.</p></details>
+      <details><summary>Paketimi yeryüzünden iptal edebilir miyim?</summary><p>Evet, tek tıkla. Ama Ali Ömer üzülür, şimdiden söyleyelim.</p></details>
+      <details><summary>Neden bu kadar pahalı?</summary><p>Bulut başına altyapı maliyeti yüksek. Hurma ve çay masrafı da cabası.</p></details>
+      <details><summary>Bu site gerçek mi?</summary><p>Hayır. Tamamen kurgu ve şaka. Hiçbir ödeme alınmıyor, kimse gerçek bir yayın izlemiyor.</p></details>
+    </div>
+  </section>
+</main>
+
+<footer>Cennet Premium · Tamamen kurgusal bir şaka sitesidir. Gerçek kişi, kurum veya olayla ilgisi yoktur.</footer>
+<div class="toast" id="t" role="status" aria-live="polite"></div>
+
+<script>
+var n=8421337,el=document.getElementById("izle");
+setInterval(function(){n+=Math.floor(Math.random()*40)-12;el.textContent=n.toLocaleString("tr-TR")},1800);
+var t=document.getElementById("t"),tm;
+document.querySelectorAll("[data-p]").forEach(function(b){b.addEventListener("click",function(){
+  t.textContent=b.dataset.p+" paketi seçildi. Ödeme sistemi bulutlarda, şu an ulaşılamıyor. (Şaka, gerçek ödeme yok.)";
+  t.classList.add("on");clearTimeout(tm);tm=setTimeout(function(){t.classList.remove("on")},4200);
+})});
+</script>
+</body>
+</html>
